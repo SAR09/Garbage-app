@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    tools:context=".BatteryArticleActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/batteryarticle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/backbt"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="5dp"
+            android:clickable="true"
+            android:contentDescription="Back"
+            android:focusable="true"
+            android:onClick="goBackToMainActivity"
+            android:src="@drawable/backbt"
+            app:layout_constraintTop_toTopOf="@+id/batteryarticle"
+            tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Artikel Baterai"
+            android:fontFamily="@font/semibold"
+            android:textColor="@color/text1"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/backbt"/>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="147dp"
+            android:layout_height="247dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/battery"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title"/>
+
+        <TextView
+            android:id="@+id/jenis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jenis Sampah : Baterai"
+            android:fontFamily="@font/medium"
+            android:textColor="@color/text1"
+            android:textSize="18sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"/>
+
+        <TextView
+            android:id="@+id/kategori"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kategori Sampah : Tidak bisa terurai (Anorganik)"
+            android:fontFamily="@font/medium"
+            android:textColor="@color/text1"
+            android:textSize="18sp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/jenis"/>
+
+        <TextView
+            android:id="@+id/penanganan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cara Penanganan :"
+            android:fontFamily="@font/medium"
+            android:textColor="@color/text1"
+            android:textSize="18sp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/kategori"/>
+
+        <TextView
+            android:id="@+id/isipenanganan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/battery_article"
+            android:fontFamily="@font/medium"
+            android:textColor="@color/text1"
+            android:textSize="18sp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/penanganan"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="10dp" /> <!-- Atur radius sesuai keinginan -->
+    <solid android:color="#C09527" /> <!-- Warna latar belakang kosong, karena kita menggunakan backgroundTint -->
+    <stroke
+        android:width="2dp"
+        android:color="@color/button_normal" /> <!-- Atur warna border dan lebar sesuai keinginan -->
+</shape>

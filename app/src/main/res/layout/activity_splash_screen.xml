@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/page_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:background="@color/white"
+    tools:context=".SplashScreenActivity"
+    tools:ignore="ExtraText">
+
+    <TextView
+        android:id="@+id/trashAppText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="-40dp"
+        android:fontFamily="@font/bold"
+        android:rotation="-90"
+        android:text="TrashAPP"
+        android:textColor="@color/text1"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/page_1"
+        app:layout_constraintTop_toTopOf="@+id/page_1" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="2dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="-35dp"
+        android:background="@color/text1"
+        app:layout_constraintStart_toEndOf="@+id/trashAppText"
+        app:layout_constraintTop_toTopOf="@+id/trashAppText"
+        app:layout_constraintBottom_toBottomOf="@+id/trashAppText"/>
+    <TextView
+        android:id="@+id/textbumi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jaga Bumi\nTanpa Buang\nSembarangan!"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/text1"
+        android:fontFamily="@font/bold"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/line"
+        app:layout_constraintTop_toTopOf="@+id/line"
+        app:layout_constraintBottom_toBottomOf="@+id/line"/>
+
+    <ImageView
+        android:id="@+id/ImgSplash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/splashbg"
+        app:layout_constraintTop_toBottomOf="@+id/textbumi"
+        app:layout_constraintStart_toStartOf="@id/line"
+
+        />
+
+    <TextView
+        android:id="@+id/katasplash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sampah Terkelola\nBumi Terpelihara"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:fontFamily="@font/medium"
+        app:layout_constraintTop_toBottomOf="@id/ImgSplash"
+        app:layout_constraintStart_toStartOf="@+id/ImgSplash"
+        app:layout_constraintEnd_toEndOf="@+id/ImgSplash"
+        />
+
+    <Button
+        android:id="@+id/btsplash"
+        android:layout_width="180dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="10dp"
+        android:text="Mulai"
+        android:textSize="20sp"
+        android:fontFamily="@font/bold"
+        android:textColor="@color/white"
+        android:background="@drawable/rounded_button"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@+id/katasplash"
+        app:layout_constraintStart_toStartOf="@+id/katasplash"
+        app:layout_constraintEnd_toEndOf="@+id/katasplash"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
