@@ -1,9 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
     android:layout_height="match_parent"
-    tools:context=".KacaArticleActivity">
+    tools:context=".KacaArticleActivity"
+    tools:ignore="SpeakableTextPresentCheck">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/kacaArticle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/backbt"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="10dp"
+            android:clickable="true"
+            android:contentDescription="Back"
+            android:focusable="true"
+            android:onClick="goBackToMainActivity"
+            android:src="@drawable/backbt"
+            app:layout_constraintTop_toTopOf="@+id/kacaArticle"
+            tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Artikel Sampah Kaca"
+            android:fontFamily="@font/semibold"
+            android:textColor="@color/text1"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/backbt"/>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="147dp"
+            android:layout_height="247dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/kaca"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title"/>
+
+        <TextView
+            android:id="@+id/jenis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jenis Sampah : Kaca"
+            android:fontFamily="@font/medium"
+            android:textColor="@color/text1"
+            android:textSize="18sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"/>
+
+        <TextView
+            android:id="@+id/kategori"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kategori Sampah : Tidak bisa terurai (Anorganik)"
+            android:fontFamily="@font/medium"
+            android:textColor="@color/text1"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/jenis"/>
+
+        <TextView
+            android:id="@+id/penanganan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cara Penanganan :"
+            android:fontFamily="@font/medium"
+            android:textColor="@color/text1"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/kategori"/>
+
+        <TextView
+            android:id="@+id/isiPenanganan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/medium"
+            android:textColor="@color/text1"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/penanganan"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -5,11 +5,4 @@
     <string name="greeting_message2">Hi, <font color="#869E22">Selamat Datang!</font></string>
     <string name="signup_message">Belum Punya Akun? <font color="#FF6200EE">Sign Up</font></string>
     <string name="login_message">Sudah Punya Akun? <font color="#FF6200EE">Sign In!</font></string>
-    <string name="battery_article">
-        1. Tempatkan baterai bekas pada tempat terpisah dari sampah lain.\n
-        2. Pasang selotip bening yang tak konduktif pada kedua ujung baterai.\n
-        3. Masukkan baterai bekas dalam plastik atau wadah khusus yang tidak bersifat konduktif.\n
-        4. Beri tanda atau nama pada wadah tersebut dengan informasi limbah baterai dan B3.\n
-        5. Kumpulkan semua limbah B3 pada tempat penampungan khusus sementara yang telah disepakati di wilayah RT atau RW.\n
-        6. Kirim Limbah B3 ke pengelola sampah B3 yang sudah memenuhi standar dan berizin.</string>
 </resources>
