@@ -13,6 +13,18 @@
         android:theme="@style/Theme.GarbageApp"
         tools:targetApi="31">
         <activity
+            android:name=".PredicitionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PredictionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CameraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".SepatuArticleActivity"
             android:exported="false" />
         <activity

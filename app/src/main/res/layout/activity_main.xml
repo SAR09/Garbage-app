@@ -1,152 +1,346 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mainpage"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginStart="10dp"
     android:layout_marginEnd="10dp"
+    android:background="#ffffff"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/text1"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:text="Temukan Tempat Sampah"
-        android:textSize="20sp"
-        android:textColor="@color/text"
-        android:fontFamily="@font/semibold"
-        android:layout_marginTop="50dp"
-        app:layout_constraintTop_toTopOf="@+id/mainpage"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/text2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:textColor="@color/text"
-        android:text="dan Buanglah Sampah"
-        android:textSize="20sp"
-        android:fontFamily="@font/semibold"
-        android:layout_marginTop="2dp"
-        app:layout_constraintTop_toBottomOf="@+id/text1"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/text3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:textColor="@color/text"
-        android:text="Sesuai Jenisnya"
-        android:textSize="20sp"
-        android:fontFamily="@font/semibold"
-        android:layout_marginTop="2dp"
-        app:layout_constraintTop_toBottomOf="@+id/text2"
-        tools:ignore="MissingConstraints" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/factcard"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardElevation="20dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginStart="10dp"
-        app:cardCornerRadius="15dp"
-        app:cardBackgroundColor="@color/fact_bg"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text3"
-        tools:ignore="MissingConstraints">
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints,UnknownId">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainpage"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="4dp"
-            tools:ignore="MissingConstraints" >
-
-            <ImageView
-                android:id="@+id/imgview"
-                android:layout_width="132dp"
-                android:layout_height="132dp"
-                android:src="@drawable/factimg"
-                android:layout_marginLeft="250dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/title"
+                android:id="@+id/text1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:fontFamily="@font/medium"
-                android:layout_marginTop="5dp"
-                android:text="Cek Fakta"
-                android:textColor="@color/white"
+                android:text="Temukan Tempat Sampah"
                 android:textSize="20sp"
+                android:textColor="@color/text"
+                android:fontFamily="@font/semibold"
+                android:layout_marginTop="50dp"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/text"
+                android:text="dan Buanglah Sampah"
+                android:textSize="20sp"
+                android:fontFamily="@font/semibold"
+                android:layout_marginTop="2dp"
+                app:layout_constraintTop_toBottomOf="@+id/text1"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/text"
+                android:text="Sesuai Jenisnya"
+                android:textSize="20sp"
+                android:fontFamily="@font/semibold"
+                android:layout_marginTop="2dp"
+                app:layout_constraintTop_toBottomOf="@+id/text2"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/factcard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="20dp"
+                android:layout_marginTop="25dp"
+                app:cardCornerRadius="15dp"
+                app:cardBackgroundColor="@color/fact_bg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text3"
+                tools:ignore="MissingConstraints">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    tools:ignore="MissingConstraints" >
+
+                    <ImageView
+                        android:id="@+id/imgview"
+                        android:layout_width="132dp"
+                        android:layout_height="132dp"
+                        android:src="@drawable/factimg"
+                        android:layout_marginLeft="250dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="@font/medium"
+                        android:layout_marginTop="5dp"
+                        android:text="Cek Fakta"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintWidth_default="percent"
+                        app:layout_constraintWidth_percent="0.8"/>
+                    <TextView
+                        android:id="@+id/textview2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="@font/medium"
+                        android:text="7,2 Juta Ton Sampah di Indonesia Belum Terkelola Dengan Baik"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/title"/>
+
+                    <TextView
+                        android:id="@+id/textview3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="@font/medium"
+                        android:textColor="@color/white"
+                        android:autoLink="web"
+                        android:textSize="10sp"
+                        android:text="Sumber: https://www.kemenkopmk.go.id/72-juta-ton-sampah-di-indonesia-belum-terkelola-dengan-baik"
+                        tools:ignore="MissingConstraints"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textview2"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textview4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jenis Sampah"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/text"
+                android:textSize="18sp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="25dp"
+                app:layout_constraintTop_toBottomOf="@+id/factcard"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/textview4"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"/>
+
             <TextView
-                android:id="@+id/textview2"
+                android:id="@+id/textview5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:fontFamily="@font/medium"
-                android:text="7,2 Juta Ton Sampah di Indonesia Belum Terkelola Dengan Baik"
+                android:text="Kategori Sampah"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/text"
                 android:textSize="18sp"
-                android:textColor="@color/white"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/title"/>
-
-            <TextView
-                android:id="@+id/textview3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:fontFamily="@font/medium"
-                android:textColor="@color/white"
-                android:autoLink="web"
-                android:textSize="10sp"
-                android:text="Sumber: https://www.kemenkopmk.go.id/72-juta-ton-sampah-di-indonesia-belum-terkelola-dengan-baik"
-                tools:ignore="MissingConstraints"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textview2"/>
+                android:layout_marginTop="25dp"
+                app:layout_constraintTop_toBottomOf="@+id/recycleView"/>
 
+            <LinearLayout
+                android:id="@+id/layoutCardCategory"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textview5">
 
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/CategoryCard"
+                    android:layout_width="136dp"
+                    android:layout_height="250dp"
+                    android:background="@color/card_color"
+                    app:cardBackgroundColor="@color/card_color">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ImgBisaTerurai"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/kardus" />
+
+                        <TextView
+                            android:id="@+id/TitleBisaTerurai"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/medium"
+                            android:text="Organik"
+                            android:textColor="@color/text"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:backgroundTint="@color/button_normal"
+                            android:fontFamily="@font/bold"
+                            android:text="Lihat"
+                            tools:ignore="MissingPrefix,TouchTargetSizeCheck" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/CategoryCard2"
+                    android:layout_width="136dp"
+                    android:layout_height="250dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@color/card_color"
+                    app:cardBackgroundColor="@color/card_color">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ImgTidakBisaTerurai"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/kardus" />
+
+                        <TextView
+                            android:id="@+id/TitleTidakBisaTerurai"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/medium"
+                            android:text="Anorganik"
+                            android:textColor="@color/text"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:backgroundTint="@color/button_normal"
+                            android:fontFamily="@font/bold"
+                            android:text="Lihat"
+                            tools:ignore="MissingPrefix,TouchTargetSizeCheck" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
-    </androidx.cardview.widget.CardView>
-
-    <TextView
-        android:id="@+id/textview4"
+    <LinearLayout
+        android:id="@+id/navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Jenis Sampah"
-        android:fontFamily="@font/bold"
-        android:textColor="@color/text"
-        android:textSize="18sp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="25dp"
-        app:layout_constraintTop_toBottomOf="@+id/factcard"
-        tools:ignore="MissingConstraints" />
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:elevation="10dp"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycleView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/textview4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        <LinearLayout
+            android:id="@+id/home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
 
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/home" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/medium"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="Beranda" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/prediction"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:src="@drawable/camera" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/medium"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="Prediksi" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/logout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/logout" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/medium"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="Logout" />
+
+        </LinearLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
