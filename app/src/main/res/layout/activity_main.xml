@@ -13,6 +13,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
         tools:ignore="MissingConstraints,UnknownId">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -100,8 +101,7 @@
                         android:textSize="20sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintWidth_default="percent"
-                        app:layout_constraintWidth_percent="0.8"/>
+                        app:layout_constraintWidth_default="percent" />
                     <TextView
                         android:id="@+id/textview2"
                         android:layout_width="0dp"
@@ -172,6 +172,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginStart="25dp"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textview5">
@@ -193,7 +194,7 @@
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:src="@drawable/kardus" />
+                            android:src="@drawable/imgorganik" />
 
                         <TextView
                             android:id="@+id/TitleBisaTerurai"
@@ -206,6 +207,7 @@
                             android:textSize="20sp" />
 
                         <Button
+                            android:id="@+id/organikbt"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -235,7 +237,7 @@
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:src="@drawable/kardus" />
+                            android:src="@drawable/imganorganik" />
 
                         <TextView
                             android:id="@+id/TitleTidakBisaTerurai"
@@ -248,6 +250,7 @@
                             android:textSize="20sp" />
 
                         <Button
+                            android:id="@+id/anorganikbt"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"

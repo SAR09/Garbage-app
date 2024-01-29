@@ -2,6 +2,7 @@ package com.example.garbage_app
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -16,9 +17,23 @@ class MainActivity : AppCompatActivity() {
     private lateinit var predictionLayout: LinearLayout
     private lateinit var logout: LinearLayout
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val buttonOrganik = findViewById<Button>(R.id.organikbt)
+        buttonOrganik.setOnClickListener {
+            val intent = Intent(this, OrganikArticleActivity::class.java)
+            startActivity(intent)
+        }
+
+        val buttonAnorganik = findViewById<Button>(R.id.anorganikbt)
+        buttonAnorganik.setOnClickListener {
+            val intent = Intent(this, AnorganikArticleActivity::class.java)
+            startActivity(intent)
+        }
 
         //ItemList untuk Jenis Sampah
         val itemList = listOf(
@@ -64,7 +79,14 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
+
+
+
+
     }
+
+
 
 
 

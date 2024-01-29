@@ -7,4 +7,11 @@
     <string name="login_message">Sudah Punya Akun? <font color="#FF6200EE">Sign In!</font></string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- String untuk artikel kategori sampah   -->
+    <string name="text1">Sampah Organik, Sampah yang Bisa Terurai dengan Mudah\nSampah organik adalah sampah yang berasal dari sisa-sisa makhluk hidup, baik hewan, tanaman, maupun manusia. Sampah ini bisa terurai dengan mudah di alam karena mengandung unsur hara yang dapat dimanfaatkan oleh mikroorganisme.</string>
+    <string name="text2">Sampah organik dapat diolah menjadi berbagai macam produk, seperti pupuk kompos, biogas, dan bioetanol. Pemanfaatan sampah organik dapat mengurangi volume sampah yang dibuang ke tempat pembuangan akhir (TPA).</string>
+    <string name="text3">Oleh karena itu, penting untuk memisahkan sampah organik dari sampah anorganik. Sampah organik dapat dibuang ke tempat sampah berwarna hijau atau diolah sendiri menjadi pupuk kompos.</string>
+    <string name="anorganik_text1">Sampah anorganik, sebagai bagian dari limbah manusia, membentuk lapisan bersejarah yang tidak terurai di lingkungan kita. Jenis sampah ini memiliki karakteristik unik yang membedakannya dari sampah organik, karena sulit atau bahkan tidak mungkin terurai melalui proses alami. </string>
+    <string name="anorganik_text2">Berikut adalah beberapa contoh sampah anorganik yang umum kita jumpai sehari-hari:</string>
+    <string name="anorganik_text3">Melihat lebih dekat pada sampah anorganik mengungkapkan keragaman limbah yang perlu kita kelola secara bijaksana. Dengan perubahan perilaku dan tindakan nyata, kita dapat membantu mengurangi dampak negatif sampah anorganik pada lingkungan kita dan menciptakan masa depan yang lebih berkelanjutan.</string>
 </resources>
