@@ -34,6 +34,7 @@ import android.content.pm.PackageManager
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import android.Manifest
+import android.widget.LinearLayout
 
 
 
@@ -45,6 +46,11 @@ class PredicitionActivity : AppCompatActivity() {
     private lateinit var progressBar: ProgressBar
     private lateinit var tvResultText: TextView
     private lateinit var predictButton: Button
+
+    //Navigation bar
+    private lateinit var homeLayout: LinearLayout
+    private lateinit var predictionLayout: LinearLayout
+    private lateinit var logout: LinearLayout
 
     private val PICK_IMAGE_REQUEST = 1
     private val CAMERA_PERMISSION_REQUEST_CODE = 101
@@ -101,6 +107,26 @@ class PredicitionActivity : AppCompatActivity() {
         btnGallery.setOnClickListener { openGallery() }
         btnCamera.setOnClickListener { openCamera() }
         predictButton.setOnClickListener { predictImage() }
+
+        predictionLayout = findViewById(R.id.prediction)
+        homeLayout = findViewById(R.id.home)
+        logout = findViewById(R.id.logout)
+
+
+        homeLayout.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
+        }
+
+        predictionLayout.setOnClickListener {
+            startActivity(Intent(this, PredicitionActivity::class.java))
+        }
+
+        logout.setOnClickListener {
+            val intent = Intent(this, SignInActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(intent)
+            finish()
+        }
     }
 
 
