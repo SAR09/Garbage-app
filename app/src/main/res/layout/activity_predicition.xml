@@ -68,7 +68,7 @@
         <LinearLayout
             android:id="@+id/ll_hasilPredict"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="150dp"
             android:orientation="vertical"
             android:paddingTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -108,7 +108,7 @@
                 android:id="@+id/predict"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="60dp"
                 android:layout_marginTop="16dp"
                 android:backgroundTint="@color/button_normal"
                 android:fontFamily="@font/bold"

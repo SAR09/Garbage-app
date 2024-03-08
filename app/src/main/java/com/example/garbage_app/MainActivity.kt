@@ -4,9 +4,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.auth.FirebaseAuth
 
 
 class MainActivity : AppCompatActivity() {
@@ -16,12 +18,15 @@ class MainActivity : AppCompatActivity() {
     private lateinit var homeLayout: LinearLayout
     private lateinit var predictionLayout: LinearLayout
     private lateinit var logout: LinearLayout
+    private lateinit var firebaseAuth: FirebaseAuth
 
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        firebaseAuth = FirebaseAuth.getInstance()
 
         val buttonOrganik = findViewById<Button>(R.id.organikbt)
         buttonOrganik.setOnClickListener {
@@ -74,16 +79,22 @@ class MainActivity : AppCompatActivity() {
         }
 
         logout.setOnClickListener {
-            val intent = Intent(this, SignInActivity::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
-            startActivity(intent)
-            finish()
+            firebaseAuth.signOut()
+            Toast.makeText(this, "Logged out successfully", Toast.LENGTH_SHORT).show()
+            goToSignInActivity()
         }
 
 
 
 
 
+    }
+
+    private fun goToSignInActivity() {
+        val intent = Intent(this, SignInActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+        startActivity(intent)
+        finish()
     }
 
 

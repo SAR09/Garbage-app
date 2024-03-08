@@ -16,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.graphics.drawable.toBitmap
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.garbage_app.PredictViewModel.Companion.TAG
+
 import com.example.garbage_app.api.ApiService
 import com.example.garbage_app.api.PredictionResponse
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
@@ -34,8 +34,9 @@ import android.content.pm.PackageManager
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import android.Manifest
+import android.content.ContentValues.TAG
 import android.widget.LinearLayout
-
+import com.google.firebase.auth.FirebaseAuth
 
 
 class PredicitionActivity : AppCompatActivity() {
@@ -46,6 +47,7 @@ class PredicitionActivity : AppCompatActivity() {
     private lateinit var progressBar: ProgressBar
     private lateinit var tvResultText: TextView
     private lateinit var predictButton: Button
+    private lateinit var firebaseAuth: FirebaseAuth
 
     //Navigation bar
     private lateinit var homeLayout: LinearLayout
@@ -58,7 +60,7 @@ class PredicitionActivity : AppCompatActivity() {
 
     private val retrofit by lazy {
         Retrofit.Builder()
-            .baseUrl(" https://garbageapp-api-e29add74242a.herokuapp.com/")
+            .baseUrl("https://garbageapp-api-e29add74242a.herokuapp.com/")
             .client(OkHttpClient())
             .addConverterFactory(GsonConverterFactory.create())
             .build()
@@ -97,6 +99,8 @@ class PredicitionActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_predicition)
 
+        firebaseAuth = FirebaseAuth.getInstance()
+
         imgPreview = findViewById(R.id.img_preview)
         btnGallery = findViewById(R.id.btn_gallery)
         btnCamera = findViewById(R.id.btn_camera)
@@ -122,11 +126,17 @@ class PredicitionActivity : AppCompatActivity() {
         }
 
         logout.setOnClickListener {
-            val intent = Intent(this, SignInActivity::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
-            startActivity(intent)
-            finish()
+            firebaseAuth.signOut()
+            Toast.makeText(this, "Logged out successfully", Toast.LENGTH_SHORT).show()
+            goToSignInActivity()
         }
+    }
+
+    private fun goToSignInActivity() {
+        val intent = Intent(this, SignInActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+        startActivity(intent)
+        finish()
     }
 
 

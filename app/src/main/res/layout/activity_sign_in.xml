@@ -137,7 +137,7 @@
         android:textColor="@color/black"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/medium"
-        android:text="@string/login_message"
+        android:text="@string/signup_message"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/page_2"
         app:layout_constraintTop_toBottomOf="@+id/loginbt" />
