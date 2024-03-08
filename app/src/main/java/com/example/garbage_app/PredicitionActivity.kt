@@ -145,8 +145,12 @@ class PredicitionActivity : AppCompatActivity() {
     }
 
     private fun openCamera() {
-        val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-        takePicture.launch(intent)
+        if (hasCameraPermission()) {
+            val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+            takePicture.launch(intent)
+        } else {
+            requestCameraPermission()
+        }
     }
 
     private fun predictImage() {
