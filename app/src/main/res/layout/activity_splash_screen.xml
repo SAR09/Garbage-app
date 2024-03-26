@@ -80,7 +80,7 @@
         android:textSize="20sp"
         android:fontFamily="@font/bold"
         android:textColor="@color/white"
-        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/button_normal"
         tools:ignore="MissingConstraints"
         app:layout_constraintTop_toBottomOf="@+id/katasplash"
         app:layout_constraintStart_toStartOf="@+id/katasplash"
