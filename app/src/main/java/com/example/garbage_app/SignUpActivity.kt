@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.garbage_app.databinding.ActivitySignUpBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthUserCollisionException
 
 class SignUpActivity : AppCompatActivity() {
 
@@ -45,7 +46,12 @@ class SignUpActivity : AppCompatActivity() {
                             val intent = Intent(this, SignInActivity::class.java)
                             startActivity(intent)
                         } else {
-                            Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
+                            // Menangani kesalahan saat pendaftaran
+                            val errorMessage = when (it.exception) {
+                                is FirebaseAuthUserCollisionException -> "Email sudah terdaftar"
+                                else -> "Gagal mendaftar: ${it.exception?.message}"
+                            }
+                            Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT).show()
                         }
                     }
                 } else {
